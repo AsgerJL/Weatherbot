@@ -1,0 +1,41 @@
+%YAML 1.1
+---
+actions:
+- utter_greet
+- utter_goodbye
+- utter_ask_location
+- action_weather
+- action_listen
+- action_restart
+- action_default_fallback
+- action_deactivate_form
+- action_revert_fallback_events
+- action_default_ask_affirmation
+- action_default_ask_rephrase
+- action_back
+- utter_goodbye## Generated Story -6482587454801791118
+config:
+  store_entities_as_slots: true
+entities:
+- location
+forms: []
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- inform:
+    use_entities: true
+slots:
+  location:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_ask_location:
+  - text: In what location?
+  utter_goodbye:
+  - text: Talk to you later.
+  - text: Bye bye :(
+  utter_greet:
+  - text: Hello! How can I help?
